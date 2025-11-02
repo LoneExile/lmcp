@@ -7,6 +7,20 @@ import {
 	writeLmcpConfig,
 } from "./config.js";
 
+/**
+ * Toggles MCP servers between active and disabled states
+ *
+ * This function redistributes servers between ~/.claude.json (active) and ~/.lmcp.json (disabled)
+ * based on the user's selection. Selected servers are moved to active configuration, while
+ * unselected servers are moved to disabled configuration.
+ *
+ * @param selectedServers - Array of server names that should be active
+ * @throws Exits process with code 1 if configuration write fails
+ *
+ * @example
+ * toggleMcpServers(['github', 'context7']);
+ * // Enables 'github' and 'context7', disables all other servers
+ */
 export function toggleMcpServers(selectedServers: string[]): void {
 	const { active, disabled } = getAllMcpServers();
 	const claudeConfig = readClaudeConfig();

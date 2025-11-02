@@ -127,6 +127,15 @@ Claude loads faster with fewer servers. Disable unused servers to improve startu
 ### Troubleshooting
 When Claude behaves unexpectedly, disable all servers and enable them one-by-one to identify the problematic server.
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the `/docs` directory:
+
+- **[Architecture Guide](./docs/ARCHITECTURE.md)** - System design, component diagrams, and data flow
+- **[API Reference](./docs/API_REFERENCE.md)** - Complete function and type documentation
+- **[Contributing Guide](./docs/CONTRIBUTING.md)** - Development setup and coding standards
+- **[Quick Reference](./docs/QUICK_REFERENCE.md)** - Fast lookup for common tasks
+
 ## 📋 Requirements
 
 - **Node.js** 16 or higher
